@@ -1,0 +1,16 @@
+body{
+    background-image: url(../img/pizza-2.webp);
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+body::after{
+    content: '';
+    display: block;
+    position: fixed;
+    background: var(--gradiente-laranja);
+    inset: 0;
+    margin: auto;
+    pointer-events: none;
+    z-index: -1;
+}
