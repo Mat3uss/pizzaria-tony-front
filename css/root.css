@@ -1,4 +1,4 @@
-:root{
+:root {
     --laranja: #F27706;
     --branco: #ffffff;
     --verde: #199570;
@@ -10,6 +10,6 @@
     --cinza-comentario: #AEA6A6;
     --cinza-usuario: #C4C4C4;
     --bege: #F4E2D1;
-    --gradiente-laranja: linear-gradient(180deg, rgba(252,121,0,0.85) 35%, rgba(252,121,0,0) 100%);
+    --gradiente-laranja: linear-gradient(180deg, rgba(252, 121, 0, 0.85) 35%, rgba(252, 121, 0, 0) 100%);
     --fonte-principal: 'Roboto', sans-serif;
 }

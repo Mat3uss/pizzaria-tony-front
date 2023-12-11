@@ -1,63 +1,53 @@
-'use strict'
+'use strict';
 
-const botao = document.getElementById('criar-conta')
-const input = document.getElementById('foto-perfil')
+const botao = document.getElementById('criar-conta');
+const input = document.getElementById('foto-perfil');
 
 botao.addEventListener('click', () => {
-    
-    const nome = document.getElementById('name')
-    const email = document.getElementById('email')
-    const password = document.getElementById('password')
-    const passwordConfirmation = document.getElementById('password-confirmation')
-    const telephone = document.getElementById('telephone')
-    
-    if(nome.value != '' && email.value != '' && password.value != '' && passwordConfirmation.value != '' && telephone.value != ''){
-        
-        if(password.value == passwordConfirmation.value){
-            
-            localStorage.setItem('nome', nome.value)
-            localStorage.setItem('email', email.value)
-            localStorage.setItem('senha', password.value)
-            localStorage.setItem('telephone', telephone.value)
-            
-            if(!localStorage.getItem('imagem')){
-                localStorage.setItem('imagem', '../img/icons/User.svg')
+    const nome = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const passwordConfirmation = document.getElementById('password-confirmation').value;
+    const telephone = document.getElementById('telephone').value;
+
+    if (nome && email && password && passwordConfirmation && telephone) {
+        if (password === passwordConfirmation) {
+            localStorage.setItem('nome', nome);
+            localStorage.setItem('email', email);
+            localStorage.setItem('senha', password);
+            localStorage.setItem('telephone', telephone);
+
+            if (!localStorage.getItem('imagem')) {
+                localStorage.setItem('imagem', '../img/icons/User.svg');
             }
 
-            nome.value = ''
-            email.value = ''
-            telephone.value = ''
-            password.value = ''
-            passwordConfirmation.value = ''
-            
-            alert('Conta criada com sucesso')
-            
-        } else if (password != passwordConfirmation){
-            alert('Informe senhas iguais')
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('telephone').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('password-confirmation').value = '';
+
+            alert('Conta criada com sucesso');
+        } else {
+            alert('Informe senhas iguais');
         }
-        
     }
-  
-})
+});
 
 input.addEventListener('change', () => {
+    const file = input.files[0];
 
-    let file = input.files[0]
-    
     if (file) {
-
         const reader = new FileReader();
-    
+
         reader.addEventListener('load', (e) => {
-            const readerTarget = e.target
-            const imagem = document.getElementById('imagem-usuario')
-            localStorage.setItem('imagem', readerTarget.result)
-            imagem.style.backgroundImage = `url(${localStorage.getItem('imagem')})`
-            imagem.removeChild(imagem.children[0])
-        })
-    
-    reader.readAsDataURL(file);
+            const readerTarget = e.target;
+            const imagem = document.getElementById('imagem-usuario');
+            localStorage.setItem('imagem', readerTarget.result);
+            imagem.style.backgroundImage = `url(${localStorage.getItem('imagem')})`;
+            imagem.removeChild(imagem.children[0]);
+        });
 
+        reader.readAsDataURL(file);
     }
-
-})
+});

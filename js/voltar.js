@@ -1,11 +1,7 @@
-'use strict'
+'use strict';
 
-const botaoVoltar = document.getElementById('voltar')
+const botaoVoltar = document.getElementById('voltar');
 
-const voltar = () => {
-
-    window.history.back()
-
-}
-
-botaoVoltar.addEventListener('click', voltar)
+botaoVoltar.addEventListener('click', () => {
+    window.history.back();
+});

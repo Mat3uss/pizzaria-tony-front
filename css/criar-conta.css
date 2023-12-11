@@ -1,11 +1,11 @@
-body{
+body {
     font-family: var(--fonte-principal);
     display: grid;
     grid-template-rows: 10vh 1fr;
     height: 100vh;
-}   
+}
 
-header{
+header {
     padding: 5vh 1.5rem 0 1.5rem;
     display: grid;
     grid-template-rows: auto 1fr;
@@ -13,7 +13,7 @@ header{
     z-index: 1;
 }
 
-#voltar{
+#voltar {
     display: flex;
     gap: 1.5rem;
     color: var(--branco);
@@ -21,9 +21,9 @@ header{
     font-size: 1.125rem;
     padding-bottom: 0.75rem;
     width: fit-content;
-}   
+}
 
-main{
+main {
     position: relative;
     z-index: 1;
     display: flex;
@@ -34,7 +34,7 @@ main{
     margin-top: calc(15vh + 1.5rem);
 }
 
-main form{
+main form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +42,7 @@ main form{
     width: 100%;
 }
 
-#imagem-usuario{
+#imagem-usuario {
     width: 15vh;
     height: 15vh;
     padding: 12px;
@@ -59,12 +59,12 @@ main form{
     margin-bottom: calc(-15vh - 1rem);
 }
 
-#imagem-usuario img{
+#imagem-usuario img {
     width: 70%;
     height: 70%;
 }
 
-#imagem-usuario label{
+#imagem-usuario label {
     position: absolute;
     background-color: var(--vermelho);
     display: flex;
@@ -77,16 +77,16 @@ main form{
     cursor: pointer;
 }
 
-#imagem-usuario label img{
+#imagem-usuario label img {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-#imagem-usuario input{
+#imagem-usuario input {
     display: none;
 }
 
-main form fieldset{
+main form fieldset {
     border: none;
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@ main form fieldset{
     width: 100%;
 }
 
-main form fieldset div{
+main form fieldset div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -103,18 +103,18 @@ main form fieldset div{
     position: relative;
 }
 
-main form fieldset div label{
+main form fieldset div label {
     color: var(--cinza);
     font-size: 0.75rem;
 }
 
-main form fieldset div input{
+main form fieldset div input {
     color: #000;
     font-weight: 600;
     font-size: 0.875rem;
 }
 
-main form fieldset div:not(:first-child)::after{
+main form fieldset div:not(:first-child)::after {
     content: '';
     display: block;
     width: 100%;
@@ -123,5 +123,3 @@ main form fieldset div:not(:first-child)::after{
     background-color: var(--cinza-usuario);
     bottom: -0.75rem;
 }
-
-

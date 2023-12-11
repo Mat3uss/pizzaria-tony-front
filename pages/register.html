@@ -10,52 +10,63 @@
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/button.css">
     <link rel="stylesheet" href="../css/header-background.css">
-    <link rel="stylesheet" href="../css/criar-conta.css">
+    <link rel="stylesheet" href="../css/perfil.css">
     <script src="../js/voltar.js" defer></script>
-    <script src="../js/criar-conta.js" defer></script>
-    <title>Criar Conta - Tony Pizzaria</title>
+    <script src="../js/perfil.js" defer></script>
+    <title>Perfil - Tony Pizzaria</title>
 </head>
 <body>
     <header>
         <button id="voltar">
             <img src="../img/icons/Voltar.svg" alt="Seta para voltar">
-            <h3> Criar Conta </h3>
+            <h3> Meu Perfil </h3>
         </button>
-        
     </header>
     <main>
-        <form method="get" onsubmit="return false;">
-            <fieldset>
-                <div id="imagem-usuario">
-                    <img src="../img/icons/User.svg" alt="Usuário">
-                    <label for="foto-perfil" id="botao-foto"> <img src="../img/icons/Camera.svg" alt="Câmera"> </label>
-                    <input id="foto-perfil" type="file">
-                </div>
+        <address>
+            <div class="info-usuario">
                 <div>
-                    <label for="name"> Nome do Usuário </label>
-                    <input type="text" name="name" id="name" required>
+                    <h2 class="nome" id="nome"> Celso </h2>
+                    <span class="cidade"> Itapevi - SP </span>
                 </div>
-                <div>
-                    <label for="email"> Endereço de e-mail </label>
-                    <input type="email" name="email" id="email" required>
+            </div>
+            <div class="informacoes">
+                <div class="info-container">
+                    <div class="icon">
+                        <img src="../img/icons/Phone.svg" alt="Telefone">
+                    </div>
+                    <div class="info">
+                        <span> Telefone </span>
+                        <h3 id="telefone"> (11) 99654-9898 </h3>
+                    </div>
                 </div>
-                <div>
-                    <label for="password"> Senha </label>
-                    <input type="password" name="password" id="password" required minlength="4">
+                <div class="info-container">
+                    <div class="icon">
+                        <img src="../img/icons/Mail.svg" alt="Email">
+                    </div>
+                    <div class="info">
+                        <span> Email </span>
+                        <h3 id="email"> celso@senai.com </h3>
+                    </div>
                 </div>
-                <div>
-                    <label for="password"> Confirmação de Senha </label>
-                    <input type="password" name="password-confirmation" id="password-confirmation" required>
+                <div class="info-container">
+                    <div class="icon">
+                        <img src="../img/icons/Location.svg" alt="Localização">
+                    </div>
+                    <div class="info">
+                        <span> Localização </span>
+                        <h3 id="endereco"> 
+                            Rua Perto de Algum Lugar,
+                            Jardim Xurupita, Brasil 
+                        </h3>
+                    </div>
                 </div>
-                <div>
-                    <label for="telephone"> Telefone </label>
-                    <input type="tel" name="telephone" id="telephone" required minlength="11">
-                </div>
-            </fieldset>
-            <button class="botao botao-verde" id="criar-conta">
-                Criar Conta
-            </button>
-        </form>
+            </div>
+        </address>
+        <button class="botao botao-vermelho" id="sair">
+            <img src="../img/icons/Exit.svg" alt="Sair">
+            <span> Sair do Sistema </span>
+        </button>
     </main>
 </body>
 </html>

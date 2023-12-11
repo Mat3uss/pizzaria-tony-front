@@ -1,18 +1,11 @@
-body{
+body {
     font-family: var(--fonte-principal);
     display: grid;
     grid-template-rows: 10vh 1fr;
     height: 100vh;
-}   
+}
 
-body{
-    font-family: var(--fonte-principal);
-    display: grid;
-    grid-template-rows: 10vh 1fr;
-    height: 100vh;
-}   
-
-header{
+header {
     padding: 5vh 1.5rem 0 1.5rem;
     display: grid;
     grid-template-rows: auto 1fr;
@@ -20,7 +13,7 @@ header{
     z-index: 1;
 }
 
-#voltar{
+#voltar {
     display: flex;
     gap: 1.5rem;
     color: var(--branco);
@@ -28,9 +21,9 @@ header{
     font-size: 1.125rem;
     padding-bottom: 0.75rem;
     width: fit-content;
-}   
+}
 
-main{
+main {
     position: relative;
     z-index: 1;
     display: flex;
@@ -43,7 +36,7 @@ main{
     border-radius: 2rem 2rem 0 0;
 }
 
-main address{
+main address {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +44,7 @@ main address{
     width: 100%;
 }
 
-.info-usuario{
+.info-usuario {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -59,7 +52,7 @@ main address{
     transform: translateY(-40%);
 }
 
-#imagem-usuario{
+#imagem-usuario {
     width: 15vh;
     height: 15vh;
     padding: 12px;
@@ -74,12 +67,12 @@ main address{
     background-repeat: no-repeat;
 }
 
-#imagem-usuario img{
+#imagem-usuario img {
     width: 70%;
     height: 70%;
 }
 
-#imagem-usuario label{
+#imagem-usuario label {
     position: absolute;
     background-color: var(--vermelho);
     display: flex;
@@ -92,33 +85,33 @@ main address{
     cursor: pointer;
 }
 
-#imagem-usuario label img{
+#imagem-usuario label img {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-#imagem-usuario input{
+#imagem-usuario input {
     display: none;
 }
 
-.info-usuario div:nth-child(2){
+.info-usuario div:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-style: normal;
 }
 
-.nome{
+.nome {
     font-weight: 700;
     font-size: 1.25rem;
 }
 
-.cidade{
+.cidade {
     font-size: 0.875rem;
     color: var(--cinza-comentario);
 }
 
-.informacoes{
+.informacoes {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -126,7 +119,7 @@ main address{
     transform: translateY(-6vh);
 }
 
-.info-container{
+.info-container {
     display: flex;
     gap: 0.75rem;
     width: 100%;
@@ -135,7 +128,7 @@ main address{
     padding: 0.75rem;
 }
 
-.icon{
+.icon {
     width: 3.125rem;
     height: 3.125rem;
     display: flex;
@@ -146,12 +139,12 @@ main address{
     flex-shrink: 0;
 }
 
-.icon img{
+.icon img {
     width: 60%;
     height: 60%;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -160,14 +153,12 @@ main address{
     gap: 0.375rem;
 }
 
-.info span{
+.info span {
     font-size: 0.75rem;
     color: var(--cinza);
 }
 
-.info h3{
+.info h3 {
     font-size: 14px;
     font-weight: 500;
 }
-
-
